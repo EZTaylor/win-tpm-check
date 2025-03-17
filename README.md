@@ -20,14 +20,13 @@ Run this script in PowerShell as Administrator to find out whether your Windows 
     - In PowerShell, press Enter to execute the command.
 5. View the results:
     - The script will display a status report like the following:
-    - **Note:** In the following example, a TPM is present, enabled, and using version 2.0.
       ```
       ===============================================
                      TPM Status Report
       ===============================================
-      TPM Present        : Yes
-      TPM Ready          : Yes
-      TPM Version        : 2.0
+      TPM Present        : ...
+      TPM Ready          : ...
+      TPM Version        : ...
       ===============================================
       ```
 

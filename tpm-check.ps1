@@ -1,3 +1,5 @@
+Clear-Host
+
 # Check if PowerShell is running as Administrator
 function Check-Admin {
     $isAdmin = [Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()

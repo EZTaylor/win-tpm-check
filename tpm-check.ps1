@@ -18,7 +18,11 @@ $TPMReady = if ($TPM.TpmReady) {"Yes"} else {"No"}
 $TPMVersion = (Get-CimInstance -ClassName Win32_TPM -Namespace root\CIMv2\Security\MicrosoftTpm).SpecVersion
 
 # Extract the first part of the version (before the first comma)
-$TPMVersionMajor = $TPMVersion.Split(',')[0]
+if ($TPMVersion) {
+    $TPMVersionMajor = $TPMVersion.Split(',')[0]
+} else {
+    $TPMVersionMajor = "N/A"
+}
 
 # Format output in a user-friendly way
 $Output = @"

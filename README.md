@@ -29,7 +29,7 @@ Run this script in PowerShell as Administrator to find out whether your Windows 
       TPM Version        : ...
       ===============================================
       ```
-
+    - Once you have this info, you're ready to finish filling out the Google Form.
 # What it does
 1. Verifies if PowerShell is running with Administrator privileges.
     - Administrator privileges are necessary to retreive TPM Version.

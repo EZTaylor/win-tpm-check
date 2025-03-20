@@ -17,8 +17,7 @@ Run this script in PowerShell as Administrator to find out whether your Windows 
     ```
     - Don't forget to **paste** the command into PowerShell after you copy it!
         - (If you see a bunch of blue characters appear in the window, you pasted it successfully!)
-4. Run the command:
-    - In PowerShell, press **Enter** to execute the command.
+4. Run the command (press ENTER)
 5. View the results:
     - The script will display a status report like the following:
       ```

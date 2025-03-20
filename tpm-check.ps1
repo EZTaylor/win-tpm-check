@@ -16,6 +16,7 @@ $TPM = Get-Tpm
 $TPMPresent = if ($TPM.TpmPresent) {"Yes"} else {"No"}
 $TPMReady = if ($TPM.TpmReady) {"Yes"} else {"No"}
 $TPMVersion = (Get-CimInstance -ClassName Win32_TPM -Namespace root\CIMv2\Security\MicrosoftTpm).SpecVersion
+$OSVersion = ((systeminfo | findstr /B /C:"OS Name") -replace "OS Name:\s+", "")
 
 # Extract the first part of the version (before the first comma)
 if ($TPMVersion) {
@@ -27,11 +28,12 @@ if ($TPMVersion) {
 # Format output in a user-friendly way
 $Output = @"
 ===============================================
-               TPM Status Report              
+               TPM/OS Status Report              
 ===============================================
 TPM Present        : $TPMPresent
 TPM Ready          : $TPMReady
 TPM Version        : $TPMVersionMajor
+OS Version         : $OSVersion
 ===============================================
 Please review the above information and fill
 out the Google Form accordingly.

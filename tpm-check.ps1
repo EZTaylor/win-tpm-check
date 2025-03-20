@@ -16,7 +16,7 @@ $TPM = Get-Tpm
 $TPMPresent = if ($TPM.TpmPresent) {"Yes"} else {"No"}
 $TPMReady = if ($TPM.TpmReady) {"Yes"} else {"No"}
 $TPMVersion = (Get-CimInstance -ClassName Win32_TPM -Namespace root\CIMv2\Security\MicrosoftTpm).SpecVersion
-$OSVersion = ((systeminfo | findstr /B /C:"OS Name") -replace "OS Name:\s+", "")
+$OSVersion = ((systeminfo | findstr /B /C:"OS Name") -replace "OS Name:\s+Microsoft ", "")
 
 # Extract the first part of the version (before the first comma)
 if ($TPMVersion) {
@@ -35,8 +35,8 @@ TPM Ready          : $TPMReady
 TPM Version        : $TPMVersionMajor
 OS Version         : $OSVersion
 ===============================================
-Please review the above information and fill
-out the Google Form accordingly.
+Please review the above information and use it
+to complete the Employee Technology Survey.
 ===============================================
 "@
 
